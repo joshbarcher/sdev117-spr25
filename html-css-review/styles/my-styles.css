@@ -62,8 +62,18 @@ body {
 
 #image-panel {
     grid-area: ip;
+    margin: auto;
+    width: 880px; 
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    img {
+        width: 200px;
+        border: 1px solid black;
+        border-radius: 4px;
+    }
 }
 
-img {
-    width: 100px;
-}
