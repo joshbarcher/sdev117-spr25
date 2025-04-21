@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pair {
+    display: flex;
+    flex-direction: row;
+
+    label {
+        font-weight: bold;
+    }
+
+    p {
+        margin: 0 0 0 10px;
+    }
+}
+
+button {
+    width: 50px;
+}
