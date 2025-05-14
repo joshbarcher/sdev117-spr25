@@ -1,0 +1,14 @@
+.important {
+    border: 1px solid darkblue;
+    background-color: lightblue;
+    padding: 10px;
+    margin: 20px;
+}
+
+.box {
+    border: 1px solid darkgreen;
+    background-color: rgb(217, 244, 217);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
