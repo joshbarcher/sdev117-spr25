@@ -1,9 +1,10 @@
 body {
+    margin: 0;
 }
 
 div#container {
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
     background-color: lightcoral;
 }
 
@@ -15,8 +16,12 @@ img {
     left: 150px;
 }
 
-input {
+/* input {
     position: absolute;
     top: 50px;
     left: 400px;
+} */
+
+#coordinates {
+    margin-top: 20px;
 }
