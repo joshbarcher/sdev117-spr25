@@ -1,0 +1,33 @@
+html {
+    background-color: rgb(78, 0, 0);
+}
+
+body {
+    background-color: beige;
+    width: 1000px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(78, 0, 0);
+    margin: 0;
+    padding: 20px;
+}
+
+img {
+    display: block;
+    margin: 20px auto 20px auto;
+    width: 600px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+button {
+    border: 1px solid black;
+    padding: 10px;
+    background-color: rgb(78, 0, 0);
+    color: beige;
+    display: block;
+    margin: 20px auto 20px auto;
+}
