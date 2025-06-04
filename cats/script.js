@@ -7,6 +7,34 @@ window.onload = () => {
     //onload we show an initial image
     loadImage();
     loadBreeds();
+    loadImages();
+}
+
+async function loadImages() {
+    const url = "https://api.thecatapi.com/v1/images/search?limit=10";
+    const config = {
+        method: "get",
+        headers: {
+            "Content-Type": "application/json",
+            "x-api-key": "cab8736c-d9ae-481e-8e20-4fe581e5cb09"
+        }
+    }
+
+    //wait until the promise of fetch() is complete
+    const response = await fetch(url, config);
+    const images = await response.json();
+
+    displayImages(images);
+}
+
+function displayImages(images) {
+    const imagesList = document.querySelector("#images");
+
+    for (const image of images) {
+        const html = `<li><a href="${image.url}"><img src="${image.url}"></a></li>`;
+
+        imagesList.innerHTML += html;
+    }
 }
 
 //async turns this function into a "promise" as well!
