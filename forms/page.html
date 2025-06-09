@@ -5,21 +5,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Survey Form</title>
         <link rel="stylesheet" href="styles.css">
+        <script src="validate.js"></script>
     </head>
     <body>
         <h1>Class Survey Form</h1>
         <!-- action is where to send the form (url), method is an HTTP verb (get/post) -->
-        <form action="/handle-form" method="post">
+        <form action="/handle-form" method="post" name="survey-form">
             <section class="form-group">
                 <label for="full-name">Name:</label>
-                <input type="text" id="full-name" name="full-name" 
-                       required minlength="2" maxlength="20">
-                <span class="error">Full name must be 2-20 characters</span>
+                <input type="text" id="full-name" name="full-name">
+                <span id="name-error" class="error">Full name must be 2-20 characters</span>
             </section>
             <section class="form-group">
                 <label for="stars">Rating (out of 5 stars)</label>
                 <input type="number" name="stars" id="stars">
-                <span class="error">Number of stars must be between 1-5</span>
+                <span id="stars-error" class="error">Number of stars must be between 1-5</span>
             </section>
 
             <section class="form-group">

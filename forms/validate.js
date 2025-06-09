@@ -13,7 +13,34 @@ function validate(event) {
 
     //access the text in the box using the value property
     const fullName = fullNameBox.value;
-    const stars = starsBox.value;
+    let stars = starsBox.value;
 
-    console.log(fullName, stars);
+    //count the number of errors I find
+    let errorCount = 0;
+
+    //validate name
+    if (fullName.length < 2 || fullName.length > 20) {
+        //show the error text
+        document.querySelector("#name-error").style.display = "block";
+        errorCount++;
+    } else {
+        //hide the error text
+        document.querySelector("#name-error").style.display = "none";
+    }
+
+    //validate stars
+    stars = parseInt(stars);
+    if (stars < 1 || stars > 5) {
+        //show the error text
+        document.querySelector("#stars-error").style.display = "block";
+        errorCount++;
+    } else {
+        //hide the error text
+        document.querySelector("#stars-error").style.display = "none";
+    }
+
+    //submit the form if everything is all right
+    if (errorCount === 0) {
+        document.forms["survey-form"].submit();
+    }
 }

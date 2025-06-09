@@ -18,12 +18,12 @@ form {
     border: 1px solid darkblue;
     margin: 20px;
     padding: 10px;
-    width: 50%;
+    width: 75%;
 }
 
 .form-group {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
     margin-bottom: 10px;
 }
