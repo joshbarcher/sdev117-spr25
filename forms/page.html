@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Survey Form</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>Class Survey Form</h1>
+        <!-- action is where to send the form (url), method is an HTTP verb (get/post) -->
+        <form action="/handle-form" method="post">
+            <section class="form-group">
+                <label for="full-name">Name:</label>
+                <input type="text" id="full-name" name="full-name" 
+                       required minlength="2" maxlength="20">
+                <span class="error">Full name must be 2-20 characters</span>
+            </section>
+            <section class="form-group">
+                <label for="stars">Rating (out of 5 stars)</label>
+                <input type="number" name="stars" id="stars">
+                <span class="error">Number of stars must be between 1-5</span>
+            </section>
+
+            <section class="form-group">
+                <label for="year">Year started:</label>
+                <select name="year" id="year">
+                    <option value="20">2020</option>
+                    <option value="21">2021</option>
+                    <option value="22">2022</option>
+                    <option value="23">2023</option>
+                    <option value="24">2024</option>
+                    <option value="25">2025</option>
+                </select>
+            </section>
+            <section class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+                <span class="error">Must be a valid email</span>
+            </section>
+            <section class="form-group">
+                <label for="bday">Birthdate:</label>
+                <input type="date" name="bday" id="bday" required>
+                <span class="error">Must be a valid date</span>
+            </section>
+
+            <section class="form-group">
+                <label>How was the class pacing?</label>
+
+                <div class="radio-group">
+                    <input type="radio" name="pacing" id="fast" value="fast" checked>
+                    <label for="fast">Fast</label>
+    
+                    <input type="radio" name="pacing" id="normal" value="just-right">
+                    <label for="normal">Normal</label>
+    
+                    <input type="radio" name="pacing" id="slow" value="slow">
+                    <label for="slow">Slow</label>
+                </div>
+            </section>
+
+            <section class="form-group">
+                <label>What did you like most?</label>
+
+                <div class="check-group">
+                    <input type="checkbox" name="coding" id="coding">
+                    <label for="coding">Live Coding</label>
+
+                    <input type="checkbox" name="lecture" id="lecture">
+                    <label for="lecture">Slides (lecture)</label>
+                </div>
+            </section>
+
+            <button type="submit">Upload Results</button>
+        </form>
+    </body>
+</html>
